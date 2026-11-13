@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marine Man｜カイウン漢</title>
+<meta name="description" content="カイウン漢（Marine Man）のプロダクトと文章への索引。港湾労働者数マップ、港湾用語クイズ、note、しずかなインターネット、Tokyo Pops。">
+<meta property="og:title" content="Marine Man｜カイウン漢">
+<meta property="og:description" content="カイウン漢（Marine Man）のプロダクトと文章への索引。港湾労働者数マップ、港湾用語クイズ、note、しずかなインターネット、Tokyo Pops。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://me.marineman5.com/">
+<link rel="canonical" href="https://me.marineman5.com/">
+<meta property="og:image" content="https://me.marineman5.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F2F2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A1A; --ink2:#4D4D4D; --ink3:#767676; --rule:#CCCCCC; --hair:#E6E6E6;
+  --bg:#F2F2F2;
+  --navy:#093BAE; --blue:#1D5BED; --mid:#6E94ED; --pale:#C6D4F6;
+  --pad:72px; --lab:232px; --cell:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{width:auto;max-width:1160px;margin:0 auto;overflow-x:hidden;color:var(--ink);font-family:Inter,"Noto Sans JP",system-ui,sans-serif;
+  font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a .lbl{transition:color .15s}
+@media (hover:hover){ a:hover .lbl{color:var(--navy)} }
+a:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+a:focus-visible .lbl{color:var(--navy)}
+ul{list-style:none}
+.ar{display:inline-block;font-size:.58em;line-height:1;vertical-align:top;margin:.12em .38em 0 0;font-family:Inter,sans-serif}   /* R12: colour inherited, so it follows hover/focus */
+.no{font-variant-numeric:tabular-nums}
+
+header.top{padding:28px var(--pad) 0;font-size:13px;color:var(--ink2)}
+header.top .id{font-weight:500;color:var(--ink)}
+
+/* every block = label column + body column, separated by a hairline */
+.row{display:grid;grid-template-columns:var(--lab) 1fr;margin:0 var(--pad);border-top:1px solid var(--rule);padding-top:20px}
+.row > .k{font-size:12px;font-weight:400;letter-spacing:.14em;color:var(--ink2);padding-top:2px}
+.row > .k h2{display:block;font-size:15px;font-weight:500;letter-spacing:.14em;color:var(--ink);margin-top:2px}
+
+.idx{margin-top:140px}
+.idx + .idx{margin-top:96px}
+.idx table{width:100%;border-collapse:collapse}
+.idx th{font-size:11px;letter-spacing:.14em;color:var(--ink2);font-weight:400;text-align:left;padding:0 0 12px}
+.idx td{border-top:1px solid var(--rule);padding:26px 0 28px;vertical-align:baseline}
+/* R15: closing rule removed (2/O review) */
+.idx td.no{width:56px;font-size:12px;color:var(--ink2)}
+.idx td.t{width:340px}
+.idx .lbl{font-size:24px;font-weight:500;line-height:1.4}
+.idx td.d{font-size:16px;color:var(--ink2);line-height:1.9}
+/* R12: the whole row (rule to rule) is the link */
+.idx tbody tr{position:relative}
+.idx td.t a::after{content:"";position:absolute;inset:0}
+.idx td.t a:focus-visible{outline:0}
+.idx td.t a:focus-visible::after{outline:2px solid var(--navy);outline-offset:0}
+
+footer.row{margin-top:160px;padding-bottom:72px}
+/* R12: CONTACT = ul + p.c; 56px indent = the old empty dt column (links start at x=420, under the index titles) */
+footer .b{padding-left:56px}
+footer ul{display:flex;gap:48px;font-size:17px;margin:-9px 0}   /* the -9px cancels the links' 9px padding, so the text stays where it was */
+footer li{display:flex}
+footer li a{display:block;padding:9px 0}   /* tap box = line (27-29px) + 18px >= 44px */
+footer .c{color:var(--ink2);font-size:15px;margin-top:14px}
+
+/* R7: R6-A split; the right column holds only the dots of the motif, straight on the page background */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 576px;column-gap:48px;align-items:center;margin:150px var(--pad) 0}
+.hero .motif{display:block}
+.who{min-width:0}   /* R10b: the name never widens the 392px column (the wave stays put) */
+.who h1{font-size:36px;line-height:1.15;font-weight:500;letter-spacing:-.04em;white-space:nowrap}   /* R12: line-height .92 -> 1.15 */
+.who h1 .sep{margin:0 -.15em;color:var(--ink3)}
+.who .sub{font-size:13px;color:var(--ink2);margin-top:12px}
+.who .intro{font-size:16px;line-height:2;margin-top:32px}
+.motif-sp{display:none}
+
+/* R12: 1041-1159px keeps the PC split; the name shrinks with its column instead of running under the wave */
+@media (max-width:1159px){
+  :root{--pad:48px}
+  .who h1{font-size:min(36px,calc((100vw - 2*var(--pad) - 624px)/10.8))}
+}
+/* R12: mid width (641-1040px): SP grammar (stacked) with PC type and the 576px wave */
+@media (max-width:1040px){
+  .hero{display:block;margin-top:96px}
+  .hero .motif{margin-top:56px;max-width:100%;height:auto}   /* <672px only: scales down */
+  .who h1{font-size:36px}
+  .row{display:block}
+  .idx table{margin-top:20px}
+  footer .k{margin-bottom:20px}
+}
+/* R10: smartphone (<= 640px). PC (above) is untouched; the SP wave SVG is hidden on PC. */
+@media (max-width:640px){
+  :root{--pad:21px; --s:.9375}        /* 390 - 2x21 = 348 = 29 lattice columns; --s = one factor for the whole type ladder */
+  header.top{padding-top:20px;font-size:calc(13px*var(--s))}
+
+  .hero{display:block;margin-top:64px}
+  .hero .motif{display:none}
+  .hero .motif-sp{display:block;margin-top:56px;max-width:100%;height:auto}   /* <369px only: scales down (dots stop being whole pixels) */
+  .who h1{font-size:min(36px,calc((100vw - 2*var(--pad))/11))}   /* R10b: one line in the text width */
+  .who .sub{font-size:calc(13px*var(--s))}
+  .who .intro{font-size:calc(16px*var(--s));margin-top:24px}
+
+  .row{display:block;padding-top:16px}
+  .row > .k{font-size:calc(12px*var(--s))}
+  .row > .k h2{font-size:calc(15px*var(--s))}
+  .idx{margin-top:72px}
+  .idx + .idx{margin-top:56px}
+  .idx table{margin-top:20px}
+  .idx table, .idx thead, .idx tbody{display:block}
+  .idx tr{display:grid;grid-template-columns:40px 1fr;align-items:baseline;border-top:1px solid var(--rule);padding:18px 0 20px}
+  .idx thead tr{border-top:0;padding:0 0 10px}   /* the NO./TITLE head row: no rule above, like PC */
+  .idx tbody tr:last-child{border-bottom:1px solid var(--rule)}
+  .idx th{font-size:calc(11px*var(--s));padding:0}
+  .idx th:last-child{display:none}            /* NOTE sits under TITLE, so its column head goes */
+  .idx td{display:block;border:0;padding:0}   /* rules live on the row (tr), not the cells */
+  .idx tbody tr:last-child td{border:0}       /* border only: padding stays with td.d (tbody raised this selector's weight) */
+  .idx td.no{width:auto;font-size:calc(12px*var(--s))}
+  .idx td.t{width:auto}
+  .idx .lbl{font-size:calc(18px*var(--s))}
+  .idx tr td.d{grid-column:2;padding-top:4px;font-size:calc(13px*var(--s));line-height:1.7;color:#6A6A6A}   /* R12: #767676 -> #6A6A6A (4.83:1 on #F2F2F2) */
+
+  footer.row{margin-top:88px;padding-bottom:48px}
+  footer .k{margin-bottom:20px}
+  footer .b{padding-left:40px}
+  footer ul{flex-direction:column;gap:0;font-size:calc(17px*var(--s))}
+  footer .c{font-size:calc(15px*var(--s))}
+}
+</style>
+</head>
+<body>
+<header class="top"><span class="id">marineman5</span></header>
+
+<section class="hero" aria-label="プロフィール">
+  <div class="who">
+    <h1 aria-label="Marine Man カイウン漢">Marine Man<span class="sep" aria-hidden="true">｜</span>カイウン漢</h1>
+    <p class="sub">Maritime industry, Tokyo | AIと海運</p>
+  </div>
+  <svg class="motif" viewBox="0 0 576 228" width="576" height="228" shape-rendering="crispEdges" aria-hidden="true"><path fill="#6E94ED" d="M221 5h2v2h-2zM245 5h2v2h-2zM268 4h3v3h-3zM293 5h2v2h-2zM317 5h2v2h-2zM209 17h2v2h-2zM232 16h3v3h-3zM316 16h3v3h-3zM328 16h3v3h-3zM353 17h2v2h-2zM173 29h2v2h-2zM196 28h3v3h-3zM352 28h3v3h-3zM365 29h2v2h-2zM557 29h2v2h-2zM17 41h2v2h-2zM161 41h2v2h-2zM172 40h3v3h-3zM220 40h3v3h-3zM232 40h3v3h-3zM244 40h3v3h-3zM256 40h3v3h-3zM268 40h3v3h-3zM280 40h3v3h-3zM292 40h3v3h-3zM304 40h3v3h-3zM316 40h3v3h-3zM328 40h3v3h-3zM376 40h3v3h-3zM401 41h2v2h-2zM545 41h2v2h-2zM556 40h3v3h-3zM4 52h3v3h-3zM16 52h3v3h-3zM29 53h2v2h-2zM53 53h2v2h-2zM125 53h2v2h-2zM148 52h3v3h-3zM160 52h3v3h-3zM172 52h3v3h-3zM184 52h3v3h-3zM196 52h3v3h-3zM208 52h3v3h-3zM220 52h3v3h-3zM244 52h3v3h-3zM268 52h3v3h-3zM292 52h3v3h-3zM316 52h3v3h-3zM340 52h3v3h-3zM352 52h3v3h-3zM364 52h3v3h-3zM376 52h3v3h-3zM388 52h3v3h-3zM400 52h3v3h-3zM413 53h2v2h-2zM437 53h2v2h-2zM509 53h2v2h-2zM532 52h3v3h-3zM544 52h3v3h-3zM556 52h3v3h-3zM568 52h3v3h-3zM16 64h3v3h-3zM40 64h3v3h-3zM64 64h3v3h-3zM88 64h3v3h-3zM112 64h3v3h-3zM136 64h3v3h-3zM160 64h3v3h-3zM185 65h2v2h-2zM209 65h2v2h-2zM233 65h2v2h-2zM257 65h2v2h-2zM281 65h2v2h-2zM305 65h2v2h-2zM329 65h2v2h-2zM353 65h2v2h-2zM376 64h3v3h-3zM400 64h3v3h-3zM424 64h3v3h-3zM448 64h3v3h-3zM472 64h3v3h-3zM496 64h3v3h-3zM520 64h3v3h-3zM544 64h3v3h-3zM569 65h2v2h-2zM5 77h2v2h-2zM29 77h2v2h-2zM53 77h2v2h-2zM77 77h2v2h-2zM101 77h2v2h-2zM125 77h2v2h-2zM149 77h2v2h-2zM173 77h2v2h-2zM197 77h2v2h-2zM221 77h2v2h-2zM245 77h2v2h-2zM269 77h2v2h-2zM293 77h2v2h-2zM317 77h2v2h-2zM341 77h2v2h-2zM365 77h2v2h-2zM389 77h2v2h-2zM413 77h2v2h-2zM437 77h2v2h-2zM461 77h2v2h-2zM485 77h2v2h-2zM509 77h2v2h-2zM533 77h2v2h-2zM557 77h2v2h-2zM17 89h2v2h-2zM41 89h2v2h-2zM65 89h2v2h-2zM89 89h2v2h-2zM113 89h2v2h-2zM137 89h2v2h-2zM160 88h3v3h-3zM172 88h3v3h-3zM220 88h3v3h-3zM232 88h3v3h-3zM257 89h2v2h-2zM353 89h2v2h-2zM377 89h2v2h-2zM401 89h2v2h-2zM425 89h2v2h-2zM449 89h2v2h-2zM473 89h2v2h-2zM497 89h2v2h-2zM521 89h2v2h-2zM545 89h2v2h-2zM569 89h2v2h-2zM101 101h2v2h-2zM124 100h3v3h-3zM268 100h3v3h-3zM293 101h2v2h-2zM89 113h2v2h-2zM100 112h3v3h-3zM292 112h3v3h-3zM305 113h2v2h-2zM569 113h2v2h-2zM53 125h2v2h-2zM76 124h3v3h-3zM316 124h3v3h-3zM341 125h2v2h-2zM533 125h2v2h-2zM556 124h3v3h-3zM41 137h2v2h-2zM52 136h3v3h-3zM353 137h2v2h-2zM521 137h2v2h-2zM532 136h3v3h-3zM5 149h2v2h-2zM28 148h3v3h-3zM148 148h3v3h-3zM160 148h3v3h-3zM172 148h3v3h-3zM184 148h3v3h-3zM196 148h3v3h-3zM208 148h3v3h-3zM220 148h3v3h-3zM232 148h3v3h-3zM244 148h3v3h-3zM364 148h3v3h-3zM389 149h2v2h-2zM485 149h2v2h-2zM508 148h3v3h-3zM4 160h3v3h-3zM100 160h3v3h-3zM112 160h3v3h-3zM124 160h3v3h-3zM136 160h3v3h-3zM160 160h3v3h-3zM184 160h3v3h-3zM208 160h3v3h-3zM232 160h3v3h-3zM256 160h3v3h-3zM268 160h3v3h-3zM280 160h3v3h-3zM292 160h3v3h-3zM388 160h3v3h-3zM400 160h3v3h-3zM425 161h2v2h-2zM449 161h2v2h-2zM472 160h3v3h-3zM484 160h3v3h-3zM52 172h3v3h-3zM64 172h3v3h-3zM76 172h3v3h-3zM88 172h3v3h-3zM100 172h3v3h-3zM125 173h2v2h-2zM149 173h2v2h-2zM173 173h2v2h-2zM197 173h2v2h-2zM221 173h2v2h-2zM245 173h2v2h-2zM269 173h2v2h-2zM292 172h3v3h-3zM304 172h3v3h-3zM316 172h3v3h-3zM328 172h3v3h-3zM340 172h3v3h-3zM532 172h3v3h-3zM544 172h3v3h-3zM556 172h3v3h-3zM568 172h3v3h-3zM4 184h3v3h-3zM16 184h3v3h-3zM28 184h3v3h-3zM40 184h3v3h-3zM64 184h3v3h-3zM89 185h2v2h-2zM113 185h2v2h-2zM137 185h2v2h-2zM161 185h2v2h-2zM185 185h2v2h-2zM209 185h2v2h-2zM233 185h2v2h-2zM257 185h2v2h-2zM281 185h2v2h-2zM305 185h2v2h-2zM328 184h3v3h-3zM352 184h3v3h-3zM364 184h3v3h-3zM376 184h3v3h-3zM388 184h3v3h-3zM400 184h3v3h-3zM412 184h3v3h-3zM424 184h3v3h-3zM436 184h3v3h-3zM448 184h3v3h-3zM460 184h3v3h-3zM472 184h3v3h-3zM484 184h3v3h-3zM496 184h3v3h-3zM508 184h3v3h-3zM520 184h3v3h-3zM544 184h3v3h-3zM569 185h2v2h-2zM4 196h3v3h-3zM29 197h2v2h-2zM53 197h2v2h-2zM77 197h2v2h-2zM101 197h2v2h-2zM125 197h2v2h-2zM269 197h2v2h-2zM293 197h2v2h-2zM317 197h2v2h-2zM341 197h2v2h-2zM365 197h2v2h-2zM388 196h3v3h-3zM412 196h3v3h-3zM436 196h3v3h-3zM460 196h3v3h-3zM484 196h3v3h-3zM509 197h2v2h-2zM533 197h2v2h-2zM557 197h2v2h-2zM17 209h2v2h-2zM41 209h2v2h-2zM65 209h2v2h-2zM329 209h2v2h-2zM353 209h2v2h-2zM377 209h2v2h-2zM401 209h2v2h-2zM425 209h2v2h-2zM449 209h2v2h-2zM473 209h2v2h-2zM497 209h2v2h-2zM521 209h2v2h-2zM545 209h2v2h-2zM5 221h2v2h-2zM29 221h2v2h-2zM365 221h2v2h-2zM389 221h2v2h-2zM413 221h2v2h-2zM437 221h2v2h-2zM461 221h2v2h-2zM485 221h2v2h-2zM509 221h2v2h-2z"/><path fill="#1D5BED" d="M244 16h4v4h-4zM256 16h4v4h-4zM268 16h4v4h-4zM280 16h4v4h-4zM292 16h4v4h-4zM304 16h4v4h-4zM208 28h4v4h-4zM220 28h4v4h-4zM232 28h4v4h-4zM244 28h4v4h-4zM256 28h4v4h-4zM268 28h4v4h-4zM280 28h4v4h-4zM292 28h4v4h-4zM304 28h4v4h-4zM316 28h4v4h-4zM328 28h4v4h-4zM340 28h4v4h-4zM184 40h4v4h-4zM196 40h4v4h-4zM208 40h4v4h-4zM340 40h4v4h-4zM352 40h4v4h-4zM364 40h4v4h-4zM568 40h4v4h-4zM184 88h4v4h-4zM196 88h4v4h-4zM208 88h4v4h-4zM136 100h4v4h-4zM148 100h4v4h-4zM159 99h5v5h-5zM171 99h5v5h-5zM219 99h5v5h-5zM231 99h5v5h-5zM244 100h4v4h-4zM256 100h4v4h-4zM112 112h4v4h-4zM123 111h5v5h-5zM195 111h5v5h-5zM267 111h5v5h-5zM280 112h4v4h-4zM88 124h4v4h-4zM99 123h5v5h-5zM123 123h5v5h-5zM135 123h5v5h-5zM147 123h5v5h-5zM159 123h5v5h-5zM171 123h5v5h-5zM183 123h5v5h-5zM195 123h5v5h-5zM207 123h5v5h-5zM219 123h5v5h-5zM231 123h5v5h-5zM243 123h5v5h-5zM255 123h5v5h-5zM267 123h5v5h-5zM291 123h5v5h-5zM304 124h4v4h-4zM568 124h4v4h-4zM64 136h4v4h-4zM75 135h5v5h-5zM87 135h5v5h-5zM99 135h5v5h-5zM111 135h5v5h-5zM124 136h4v4h-4zM136 136h4v4h-4zM148 136h4v4h-4zM160 136h4v4h-4zM172 136h4v4h-4zM184 136h4v4h-4zM196 136h4v4h-4zM208 136h4v4h-4zM220 136h4v4h-4zM232 136h4v4h-4zM244 136h4v4h-4zM256 136h4v4h-4zM268 136h4v4h-4zM279 135h5v5h-5zM291 135h5v5h-5zM303 135h5v5h-5zM315 135h5v5h-5zM328 136h4v4h-4zM544 136h4v4h-4zM555 135h5v5h-5zM567 135h5v5h-5zM40 148h4v4h-4zM51 147h5v5h-5zM63 147h5v5h-5zM75 147h5v5h-5zM88 148h4v4h-4zM100 148h4v4h-4zM112 148h4v4h-4zM124 148h4v4h-4zM136 148h4v4h-4zM256 148h4v4h-4zM268 148h4v4h-4zM280 148h4v4h-4zM292 148h4v4h-4zM304 148h4v4h-4zM315 147h5v5h-5zM327 147h5v5h-5zM339 147h5v5h-5zM352 148h4v4h-4zM520 148h4v4h-4zM531 147h5v5h-5zM543 147h5v5h-5zM555 147h5v5h-5zM568 148h4v4h-4zM16 160h4v4h-4zM28 160h4v4h-4zM40 160h4v4h-4zM52 160h4v4h-4zM64 160h4v4h-4zM76 160h4v4h-4zM88 160h4v4h-4zM304 160h4v4h-4zM316 160h4v4h-4zM328 160h4v4h-4zM340 160h4v4h-4zM352 160h4v4h-4zM364 160h4v4h-4zM376 160h4v4h-4zM496 160h4v4h-4zM508 160h4v4h-4zM520 160h4v4h-4zM532 160h4v4h-4zM544 160h4v4h-4zM556 160h4v4h-4zM568 160h4v4h-4zM4 172h4v4h-4zM16 172h4v4h-4zM28 172h4v4h-4zM40 172h4v4h-4zM352 172h4v4h-4zM364 172h4v4h-4zM376 172h4v4h-4zM388 172h4v4h-4zM400 172h4v4h-4zM412 172h4v4h-4zM424 172h4v4h-4zM436 172h4v4h-4zM448 172h4v4h-4zM460 172h4v4h-4zM472 172h4v4h-4zM484 172h4v4h-4zM496 172h4v4h-4zM508 172h4v4h-4zM520 172h4v4h-4z"/><path fill="#083191" d="M183 99h5v5h-5zM195 99h5v5h-5zM207 99h5v5h-5zM135 111h5v5h-5zM147 111h5v5h-5zM159 111h5v5h-5zM171 111h5v5h-5zM183 111h5v5h-5zM207 111h5v5h-5zM219 111h5v5h-5zM231 111h5v5h-5zM243 111h5v5h-5zM255 111h5v5h-5zM111 123h5v5h-5zM279 123h5v5h-5z"/></svg>
+  <svg class="motif-sp" viewBox="0 0 348 228" width="348" height="228" shape-rendering="crispEdges" aria-hidden="true"><path fill="#6E94ED" d="M221 5h2v2h-2zM245 5h2v2h-2zM268 4h3v3h-3zM293 5h2v2h-2zM317 5h2v2h-2zM209 17h2v2h-2zM232 16h3v3h-3zM316 16h3v3h-3zM328 16h3v3h-3zM173 29h2v2h-2zM196 28h3v3h-3zM17 41h2v2h-2zM161 41h2v2h-2zM172 40h3v3h-3zM220 40h3v3h-3zM232 40h3v3h-3zM244 40h3v3h-3zM256 40h3v3h-3zM268 40h3v3h-3zM280 40h3v3h-3zM292 40h3v3h-3zM304 40h3v3h-3zM316 40h3v3h-3zM328 40h3v3h-3zM4 52h3v3h-3zM16 52h3v3h-3zM29 53h2v2h-2zM53 53h2v2h-2zM125 53h2v2h-2zM148 52h3v3h-3zM160 52h3v3h-3zM172 52h3v3h-3zM184 52h3v3h-3zM196 52h3v3h-3zM208 52h3v3h-3zM220 52h3v3h-3zM244 52h3v3h-3zM268 52h3v3h-3zM292 52h3v3h-3zM316 52h3v3h-3zM340 52h3v3h-3zM16 64h3v3h-3zM40 64h3v3h-3zM64 64h3v3h-3zM88 64h3v3h-3zM112 64h3v3h-3zM136 64h3v3h-3zM160 64h3v3h-3zM185 65h2v2h-2zM209 65h2v2h-2zM233 65h2v2h-2zM257 65h2v2h-2zM281 65h2v2h-2zM305 65h2v2h-2zM329 65h2v2h-2zM5 77h2v2h-2zM29 77h2v2h-2zM53 77h2v2h-2zM77 77h2v2h-2zM101 77h2v2h-2zM125 77h2v2h-2zM149 77h2v2h-2zM173 77h2v2h-2zM197 77h2v2h-2zM221 77h2v2h-2zM245 77h2v2h-2zM269 77h2v2h-2zM293 77h2v2h-2zM317 77h2v2h-2zM341 77h2v2h-2zM17 89h2v2h-2zM41 89h2v2h-2zM65 89h2v2h-2zM89 89h2v2h-2zM113 89h2v2h-2zM137 89h2v2h-2zM160 88h3v3h-3zM172 88h3v3h-3zM220 88h3v3h-3zM232 88h3v3h-3zM257 89h2v2h-2zM101 101h2v2h-2zM124 100h3v3h-3zM268 100h3v3h-3zM293 101h2v2h-2zM89 113h2v2h-2zM100 112h3v3h-3zM292 112h3v3h-3zM305 113h2v2h-2zM53 125h2v2h-2zM76 124h3v3h-3zM316 124h3v3h-3zM341 125h2v2h-2zM41 137h2v2h-2zM52 136h3v3h-3zM5 149h2v2h-2zM28 148h3v3h-3zM148 148h3v3h-3zM160 148h3v3h-3zM172 148h3v3h-3zM184 148h3v3h-3zM196 148h3v3h-3zM208 148h3v3h-3zM220 148h3v3h-3zM232 148h3v3h-3zM244 148h3v3h-3zM4 160h3v3h-3zM100 160h3v3h-3zM112 160h3v3h-3zM124 160h3v3h-3zM136 160h3v3h-3zM160 160h3v3h-3zM184 160h3v3h-3zM208 160h3v3h-3zM232 160h3v3h-3zM256 160h3v3h-3zM268 160h3v3h-3zM280 160h3v3h-3zM292 160h3v3h-3zM52 172h3v3h-3zM64 172h3v3h-3zM76 172h3v3h-3zM88 172h3v3h-3zM100 172h3v3h-3zM125 173h2v2h-2zM149 173h2v2h-2zM173 173h2v2h-2zM197 173h2v2h-2zM221 173h2v2h-2zM245 173h2v2h-2zM269 173h2v2h-2zM292 172h3v3h-3zM304 172h3v3h-3zM316 172h3v3h-3zM328 172h3v3h-3zM340 172h3v3h-3zM4 184h3v3h-3zM16 184h3v3h-3zM28 184h3v3h-3zM40 184h3v3h-3zM64 184h3v3h-3zM89 185h2v2h-2zM113 185h2v2h-2zM137 185h2v2h-2zM161 185h2v2h-2zM185 185h2v2h-2zM209 185h2v2h-2zM233 185h2v2h-2zM257 185h2v2h-2zM281 185h2v2h-2zM305 185h2v2h-2zM328 184h3v3h-3zM4 196h3v3h-3zM29 197h2v2h-2zM53 197h2v2h-2zM77 197h2v2h-2zM101 197h2v2h-2zM125 197h2v2h-2zM269 197h2v2h-2zM293 197h2v2h-2zM317 197h2v2h-2zM341 197h2v2h-2zM17 209h2v2h-2zM41 209h2v2h-2zM65 209h2v2h-2zM329 209h2v2h-2zM5 221h2v2h-2zM29 221h2v2h-2z"/><path fill="#1D5BED" d="M244 16h4v4h-4zM256 16h4v4h-4zM268 16h4v4h-4zM280 16h4v4h-4zM292 16h4v4h-4zM304 16h4v4h-4zM208 28h4v4h-4zM220 28h4v4h-4zM232 28h4v4h-4zM244 28h4v4h-4zM256 28h4v4h-4zM268 28h4v4h-4zM280 28h4v4h-4zM292 28h4v4h-4zM304 28h4v4h-4zM316 28h4v4h-4zM328 28h4v4h-4zM340 28h4v4h-4zM184 40h4v4h-4zM196 40h4v4h-4zM208 40h4v4h-4zM340 40h4v4h-4zM184 88h4v4h-4zM196 88h4v4h-4zM208 88h4v4h-4zM136 100h4v4h-4zM148 100h4v4h-4zM159 99h5v5h-5zM171 99h5v5h-5zM219 99h5v5h-5zM231 99h5v5h-5zM244 100h4v4h-4zM256 100h4v4h-4zM112 112h4v4h-4zM123 111h5v5h-5zM195 111h5v5h-5zM267 111h5v5h-5zM280 112h4v4h-4zM88 124h4v4h-4zM99 123h5v5h-5zM123 123h5v5h-5zM135 123h5v5h-5zM147 123h5v5h-5zM159 123h5v5h-5zM171 123h5v5h-5zM183 123h5v5h-5zM195 123h5v5h-5zM207 123h5v5h-5zM219 123h5v5h-5zM231 123h5v5h-5zM243 123h5v5h-5zM255 123h5v5h-5zM267 123h5v5h-5zM291 123h5v5h-5zM304 124h4v4h-4zM64 136h4v4h-4zM75 135h5v5h-5zM87 135h5v5h-5zM99 135h5v5h-5zM111 135h5v5h-5zM124 136h4v4h-4zM136 136h4v4h-4zM148 136h4v4h-4zM160 136h4v4h-4zM172 136h4v4h-4zM184 136h4v4h-4zM196 136h4v4h-4zM208 136h4v4h-4zM220 136h4v4h-4zM232 136h4v4h-4zM244 136h4v4h-4zM256 136h4v4h-4zM268 136h4v4h-4zM279 135h5v5h-5zM291 135h5v5h-5zM303 135h5v5h-5zM315 135h5v5h-5zM328 136h4v4h-4zM40 148h4v4h-4zM51 147h5v5h-5zM63 147h5v5h-5zM75 147h5v5h-5zM88 148h4v4h-4zM100 148h4v4h-4zM112 148h4v4h-4zM124 148h4v4h-4zM136 148h4v4h-4zM256 148h4v4h-4zM268 148h4v4h-4zM280 148h4v4h-4zM292 148h4v4h-4zM304 148h4v4h-4zM315 147h5v5h-5zM327 147h5v5h-5zM339 147h5v5h-5zM16 160h4v4h-4zM28 160h4v4h-4zM40 160h4v4h-4zM52 160h4v4h-4zM64 160h4v4h-4zM76 160h4v4h-4zM88 160h4v4h-4zM304 160h4v4h-4zM316 160h4v4h-4zM328 160h4v4h-4zM340 160h4v4h-4zM4 172h4v4h-4zM16 172h4v4h-4zM28 172h4v4h-4zM40 172h4v4h-4z"/><path fill="#083191" d="M183 99h5v5h-5zM195 99h5v5h-5zM207 99h5v5h-5zM135 111h5v5h-5zM147 111h5v5h-5zM159 111h5v5h-5zM171 111h5v5h-5zM183 111h5v5h-5zM207 111h5v5h-5zM219 111h5v5h-5zM231 111h5v5h-5zM243 111h5v5h-5zM255 111h5v5h-5zM111 123h5v5h-5zM279 123h5v5h-5z"/></svg>
+</section>
+
+<section class="row idx" aria-labelledby="p">
+  <div class="k"><h2 id="p">PRODUCTS</h2></div>
+  <table>
+    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th><th scope="col">NOTE</th></tr></thead>
+    <tbody>
+    <tr><td class="no">01</td><td class="t"><a href="https://marineman5.com/" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾労働者数マップ</span></a></td><td class="d">港湾労働者数を全国マップで確認</td></tr>
+    <tr><td class="no">02</td><td class="t"><a href="https://marineman5.github.io/Harbor-word-quiz/" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾用語クイズ</span></a></td><td class="d">現場のことばを当てるクイズゲーム</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="row idx" aria-labelledby="w">
+  <div class="k"><h2 id="w">WRITING</h2></div>
+  <table>
+    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th><th scope="col">NOTE</th></tr></thead>
+    <tbody>
+    <tr><td class="no">01</td><td class="t"><a href="https://note.com/marine_man5" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>note</span></a></td><td class="d">プロダクトの作り方と、現場の話</td></tr>
+    <tr><td class="no">02</td><td class="t"><a href="https://sizu.me/marineman5" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>しずかなインターネット</span></a></td><td class="d">2024年春のエッセイと日記</td></tr>
+    <tr><td class="no">03</td><td class="t"><a href="https://note.com/tokyopops" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>Tokyo Pops</span></a></td><td class="d">東京の公開空地を訪ねるnoteメディア</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="row" aria-labelledby="c">
+  <h2 class="k" id="c">CONTACT</h2>
+  <div class="b">
+    <ul>
+      <li><a href="https://x.com/marine_man5" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>X — @marine_man5</span></a></li>
+      <li><a href="https://github.com/Marineman5" rel="noopener"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>GitHub — Marineman5</span></a></li>
+    </ul>
+    <p class="c">© 2026 marineman5</p>
+  </div>
+</footer>
+</body>
+</html>
