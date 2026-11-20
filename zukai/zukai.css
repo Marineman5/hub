@@ -184,3 +184,11 @@ footer .c{color:var(--ink2);font-size:14px;margin-top:14px}
 @media (max-width:760px){
   .dotband + .list{margin-top:40px}
 }
+
+/* 個別ページv3モック：メタ情報は図の下に横並び（SOURCE・POSTの2項目） */
+.single .meta{display:grid;grid-template-columns:2fr 1.3fr;gap:0 28px;margin-top:34px;border-top:1px solid var(--rule);padding-top:16px}
+.single .meta > div:nth-child(2){border-left:1px solid var(--rule);padding-left:20px}
+@media (max-width:640px){
+  .single .meta{grid-template-columns:1fr;gap:18px}
+  .single .meta > div:nth-child(2){border-left:none;padding-left:0}
+}
