@@ -53,9 +53,8 @@ header.top .id{font-weight:500;color:var(--ink)}
 .idx td{border-top:1px solid var(--rule);padding:26px 0 28px;vertical-align:baseline}
 /* R15: closing rule removed (2/O review) */
 .idx td.no{width:56px;font-size:12px;color:var(--ink2)}
-.idx td.t{width:340px}
+.idx td.t{width:auto}
 .idx .lbl{font-size:24px;font-weight:500;line-height:1.4}
-.idx td.d{font-size:16px;color:var(--ink2);line-height:1.9}
 /* R12: the whole row (rule to rule) is the link */
 .idx tbody tr{position:relative}
 .idx td.t a::after{content:"";position:absolute;inset:0}
@@ -117,13 +116,11 @@ footer .c{color:var(--ink2);font-size:15px;margin-top:14px}
   .idx thead tr{border-top:0;padding:0 0 10px}   /* the NO./TITLE head row: no rule above, like PC */
   .idx tbody tr:last-child{border-bottom:1px solid var(--rule)}
   .idx th{font-size:calc(11px*var(--s));padding:0}
-  .idx th:last-child{display:none}            /* NOTE sits under TITLE, so its column head goes */
   .idx td{display:block;border:0;padding:0}   /* rules live on the row (tr), not the cells */
-  .idx tbody tr:last-child td{border:0}       /* border only: padding stays with td.d (tbody raised this selector's weight) */
+  .idx tbody tr:last-child td{border:0}       /* border only: padding stays (tbody raised this selector's weight) */
   .idx td.no{width:auto;font-size:calc(12px*var(--s))}
   .idx td.t{width:auto}
   .idx .lbl{font-size:calc(18px*var(--s))}
-  .idx tr td.d{grid-column:2;padding-top:4px;font-size:calc(13px*var(--s));line-height:1.7;color:#6A6A6A}   /* R12: #767676 -> #6A6A6A (4.83:1 on #F2F2F2) */
 
   footer.row{margin-top:88px;padding-bottom:48px}
   footer .k{margin-bottom:20px}
@@ -148,12 +145,12 @@ footer .c{color:var(--ink2);font-size:15px;margin-top:14px}
 <section class="row idx" aria-labelledby="p">
   <div class="k"><h2 id="p">PRODUCTS</h2></div>
   <table>
-    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th><th scope="col">NOTE</th></tr></thead>
+    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th></tr></thead>
     <tbody>
-    <tr><td class="no">01</td><td class="t"><a href="https://marineman5.com/" rel="noopener" data-goatcounter-click="ext-map"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾労働者数マップ</span></a></td><td class="d">港湾労働者数を可視化してみました</td></tr>
-    <tr><td class="no">02</td><td class="t"><a href="https://marineman5.github.io/Harbor-word-quiz/" rel="noopener" data-goatcounter-click="ext-quiz"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾用語クイズ</span></a></td><td class="d">現場のことばを当てるクイズゲーム</td></tr>
-    <tr><td class="no">03</td><td class="t"><a href="https://news.marineman5.com/" rel="noopener" data-goatcounter-click="ext-news"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>Lunch Time News</span></a></td><td class="d">平日のお昼に厳選した海運ニュースをお届けしています</td></tr>
-    <tr><td class="no">04</td><td class="t"><a href="/zukai/"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>海運図解</span></a></td><td class="d">ニュースだけだと見えにくい海運の関係を1枚の図にしています</td></tr>
+    <tr><td class="no">01</td><td class="t"><a href="https://marineman5.com/" rel="noopener" data-goatcounter-click="ext-map"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾労働者数マップ</span></a></td></tr>
+    <tr><td class="no">02</td><td class="t"><a href="https://marineman5.github.io/Harbor-word-quiz/" rel="noopener" data-goatcounter-click="ext-quiz"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>港湾用語クイズ</span></a></td></tr>
+    <tr><td class="no">03</td><td class="t"><a href="https://news.marineman5.com/" rel="noopener" data-goatcounter-click="ext-news"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>Lunch Time News</span></a></td></tr>
+    <tr><td class="no">04</td><td class="t"><a href="/zukai/"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>海運図解</span></a></td></tr>
     </tbody>
   </table>
 </section>
@@ -161,10 +158,10 @@ footer .c{color:var(--ink2);font-size:15px;margin-top:14px}
 <section class="row idx" aria-labelledby="w">
   <div class="k"><h2 id="w">WRITING</h2></div>
   <table>
-    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th><th scope="col">NOTE</th></tr></thead>
+    <thead><tr><th scope="col">NO.</th><th scope="col">TITLE</th></tr></thead>
     <tbody>
-    <tr><td class="no">01</td><td class="t"><a href="https://note.com/marine_man5" rel="noopener" data-goatcounter-click="ext-note"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>note</span></a></td><td class="d">海運の現場やAIについて</td></tr>
-    <tr><td class="no">02</td><td class="t"><a href="https://sizu.me/marineman5" rel="noopener" data-goatcounter-click="ext-sizu"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>しずかなインターネット</span></a></td><td class="d">しずかに綴ってます</td></tr>
+    <tr><td class="no">01</td><td class="t"><a href="https://note.com/marine_man5" rel="noopener" data-goatcounter-click="ext-note"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>note</span></a></td></tr>
+    <tr><td class="no">02</td><td class="t"><a href="https://sizu.me/marineman5" rel="noopener" data-goatcounter-click="ext-sizu"><span class="lbl"><span class="ar" aria-hidden="true">↘</span>しずかなインターネット</span></a></td></tr>
     </tbody>
   </table>
 </section>
